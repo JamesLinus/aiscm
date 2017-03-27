@@ -1,0 +1,37 @@
+Origin: AIscm
+Label: AIscm
+Codename: trusty
+Date: Mon, 29 May 2017 19:04:29 UTC
+Architectures: i386 amd64
+Components: main
+Description: Apt repository for AIscm
+MD5Sum:
+ d41d8cd98f00b204e9800998ecf8427e 0 main/binary-i386/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
+ 581bbd0a6dddfac54eb2cd4877368a57 100 main/binary-i386/Release
+ 4408560dd9fb2abecff573238f883448 1252 main/binary-amd64/Packages
+ dee8807a2e6b2c1e0bd1dc4bc8eed292 761 main/binary-amd64/Packages.gz
+ a1ca2a9369eac791d9483f7e431ab3cf 101 main/binary-amd64/Release
+ 5b3dc90039ef6dabcb4052b1e8e3ba5d 1458 main/source/Sources
+ 1d295bd4fc982612f7b14cd86ed25073 753 main/source/Sources.gz
+ ede8bf885c7995601214c7650e227812 102 main/source/Release
+SHA1:
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-i386/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
+ 9d388ca82a4bd6e6b7ce39e0e1b4e152de8df623 100 main/binary-i386/Release
+ f4813be8b38daafd3cfa4aec1c1c0d9b803c6655 1252 main/binary-amd64/Packages
+ 7a70d3aed87101666bdf74b9f45b40fbcb952e02 761 main/binary-amd64/Packages.gz
+ c8ca83d87eabf331531343b0ee120dcecfde4e5d 101 main/binary-amd64/Release
+ 0292141407e7f7ed4ce24cc0b64fce534f686e4d 1458 main/source/Sources
+ fc076c07a8f4c3568a839974dc036496bd59cfdb 753 main/source/Sources.gz
+ 076823b9d693a12470363adda895cad187be80d1 102 main/source/Release
+SHA256:
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-i386/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-i386/Packages.gz
+ 497421e335edf34550777c30a35ea20a26ab4d262309d74d7c3d3036d6fb4219 100 main/binary-i386/Release
+ 0e140c8c1c67cae19a09a38c5bbcfb1cd13113047c755dc52be926b6c65b81e1 1252 main/binary-amd64/Packages
+ cf50bc4c376550e80f99ce47b420ec7ef3358677771218b744d5044a3e0fa73b 761 main/binary-amd64/Packages.gz
+ 3558c384eeed1a7a4c5e45a0b1a5f9a6ae02483ddf2cfc670e687a5dfbeb1997 101 main/binary-amd64/Release
+ ba0d9875148f872d36f53bfe233b68edd2dee0cf05624d3090c7d84486a44efb 1458 main/source/Sources
+ e64ef73272bfb56f7fe5c08f370f537b287ec54b15eb04ba70bce495b1b00a42 753 main/source/Sources.gz
+ c76b24a00da733c403b6d58c568d4bc4a81995640beba3ef48afd2109aa21ba6 102 main/source/Release
