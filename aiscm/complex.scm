@@ -35,7 +35,7 @@
             <pointer<complex<>>> <meta<pointer<complex<>>>>
             complex)
   #:re-export (<pointer<element>> <meta<pointer<element>>>
-               real-part imag-part to-type conj - + * / += *= max= min=))
+               real-part imag-part to-type conj - + * / max += *= max= min=))
 
 (define ctx (make <context>))
 
@@ -110,6 +110,8 @@
 (define-method (conj (a <internalcomplex>)) (complex (real-part a) (- (imag-part a))))
 (binary-complex-op +)
 (binary-complex-op -)
+(binary-complex-op max)
+(binary-complex-op min)
 (define-method (* (a <internalcomplex>) b) (apply complex (map (cut * <> b) (content <complex<>> a))))
 (define-method (* a (b <internalcomplex>)) (apply complex (map (cut * a <>) (content <complex<>> b))))
 (define-method (* (a <internalcomplex>) (b <internalcomplex>))

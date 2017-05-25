@@ -3,6 +3,7 @@
 * complex max, min
 * fix delegate-op hack for cumulative operations
 * simplify RGB and complex cumulative operation definition
+* documentation for RGB and complex tensors
 * operation-code list of args -> args
 * to-type in tensor expresssions, implicit typecasting in tensor sum?
 * n-dimensional tensor sums, standalone sum expression

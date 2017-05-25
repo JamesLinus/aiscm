@@ -117,6 +117,22 @@
   2+3i ((jit ctx (list (complex <int>) <int>) /) 4+6i 2))
 (test-eqv "divide number by complex number"
   3-4i ((jit ctx (list <int> (complex <int>)) /) 25 3+4i))
+
+(test-eqv "largest complex components"
+  7+5i ((jit ctx (list (complex <int>) (complex <int>)) max) 2+5i 7+3i))
+(test-eqv "largest complex components with real value"
+  7+3i ((jit ctx (list (complex <int>) <int>) max) 7+3i 4))
+(test-eqv "real value with largest complex component"
+  4+3i ((jit ctx (list <int> (complex <int>)) max) 4 2+3i))
+
+(test-eqv "smallest complex components"
+  2+3i ((jit ctx (list (complex <int>) (complex <int>)) min) 2+5i 7+3i))
+(test-eqv "smallest complex components with real value"
+  4-3i ((jit ctx (list (complex <int>) <int>) min) 7-3i 4))
+(test-skip 1)
+(test-eqv "real value with smallest complex component"
+  2 ((jit ctx (list <int> (complex <int>)) min) 4 2+3i))
+
 (test-eqv "get real part of real number"
   42 ((jit ctx (list <int>) real-part) 42))
 (test-equal "real part of array is array"
