@@ -2,7 +2,7 @@ Format: 3.0 (quilt)
 Source: aiscm
 Binary: aiscm
 Architecture: amd64
-Version: 0.12.1-1+trusty1
+Version: 0.13.1-1+trusty1
 Maintainer: Jan Wedekind <jan@wedesoft.de>
 Homepage: http://wedesoft.github.io/aiscm/
 Standards-Version: 3.9.5
@@ -10,11 +10,11 @@ Build-Depends: guile-2.0-dev (>= 2.0.9), linux-libc-dev, gettext, libmjpegtools-
 Package-List: 
  aiscm deb lisp optional
 Checksums-Sha1: 
- a15482d3322c4f889f5c8d87ff9cd7e7d94b5831 3653720 aiscm_0.12.1.orig.tar.gz
- b7f77514e14be8b87b0d15ee7ef2c594b743f9c3 4962 aiscm_0.12.1-1+trusty1.debian.tar.gz
+ 05f6776cf6e35efbe12304e20e368c4603ffc199 3688765 aiscm_0.13.1.orig.tar.gz
+ 297cae2350980b12058a0fc9aa5d1bf9b269a540 5057 aiscm_0.13.1-1+trusty1.debian.tar.gz
 Checksums-Sha256: 
- b43ef52a138cf2f6b8f5acce53ee194cccbd80cc3f1ea6669d41960bb4d18df9 3653720 aiscm_0.12.1.orig.tar.gz
- 5627396c825c0d1a7a38b4bde75051092dc4373eb64c30dcf755450cd160b8de 4962 aiscm_0.12.1-1+trusty1.debian.tar.gz
+ 4016ca6f78756b6e0d70707d59d8b355359fb55f5ff916daabb3715c49a977a2 3688765 aiscm_0.13.1.orig.tar.gz
+ 486c0afb2dfdd55264f668b7366017532062b0b440ceba03fa0af40df8b63d4e 5057 aiscm_0.13.1-1+trusty1.debian.tar.gz
 Files: 
- 93696a345bd29ed4c18aa42be272e4e1 3653720 aiscm_0.12.1.orig.tar.gz
- 96936551a2fb0e11bb04b8a976db787b 4962 aiscm_0.12.1-1+trusty1.debian.tar.gz
+ b696c252a50ce6350e804e3f52cb3a6b 3688765 aiscm_0.13.1.orig.tar.gz
+ 9bcdf048bde75b5281511aa4d365e44c 5057 aiscm_0.13.1-1+trusty1.debian.tar.gz

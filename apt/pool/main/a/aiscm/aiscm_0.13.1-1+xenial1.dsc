@@ -2,7 +2,7 @@ Format: 3.0 (quilt)
 Source: aiscm
 Binary: aiscm
 Architecture: amd64
-Version: 0.12.1-1+xenial1
+Version: 0.13.1-1+xenial1
 Maintainer: Jan Wedekind <jan@wedesoft.de>
 Homepage: http://wedesoft.github.io/aiscm/
 Standards-Version: 3.9.8
@@ -10,11 +10,11 @@ Build-Depends: guile-2.0-dev (>= 2.0.9), linux-libc-dev, gettext, libmjpegtools-
 Package-List:
  aiscm deb lisp optional arch=amd64
 Checksums-Sha1:
- a15482d3322c4f889f5c8d87ff9cd7e7d94b5831 3653720 aiscm_0.12.1.orig.tar.gz
- 78a5fb952dc71ef145443280b3400d7fe4436ed4 4836 aiscm_0.12.1-1+xenial1.debian.tar.xz
+ 05f6776cf6e35efbe12304e20e368c4603ffc199 3688765 aiscm_0.13.1.orig.tar.gz
+ cc82e169fb7999d7e3991037ab97839e6ae76ca4 4868 aiscm_0.13.1-1+xenial1.debian.tar.xz
 Checksums-Sha256:
- b43ef52a138cf2f6b8f5acce53ee194cccbd80cc3f1ea6669d41960bb4d18df9 3653720 aiscm_0.12.1.orig.tar.gz
- 62f2b6a684ff568a6fbd98bba7ac546413272580f3a767707a7f218701d2ef53 4836 aiscm_0.12.1-1+xenial1.debian.tar.xz
+ 4016ca6f78756b6e0d70707d59d8b355359fb55f5ff916daabb3715c49a977a2 3688765 aiscm_0.13.1.orig.tar.gz
+ 2743309ed99226bbaaf8d880bdc87a2c425d92efb8cdf35f67b05ca4c1f35bf2 4868 aiscm_0.13.1-1+xenial1.debian.tar.xz
 Files:
- 93696a345bd29ed4c18aa42be272e4e1 3653720 aiscm_0.12.1.orig.tar.gz
- 75cd92fe3c4a4104aa66dfedcdd4a0c7 4836 aiscm_0.12.1-1+xenial1.debian.tar.xz
+ b696c252a50ce6350e804e3f52cb3a6b 3688765 aiscm_0.13.1.orig.tar.gz
+ 4c3537937fd8934d59893f04b3c4890d 4868 aiscm_0.13.1-1+xenial1.debian.tar.xz

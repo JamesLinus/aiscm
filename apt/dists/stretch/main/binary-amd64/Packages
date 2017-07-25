@@ -1,5 +1,5 @@
 Package: aiscm
-Version: 0.13.1-1
+Version: 0.13.1-1+deb9u1
 Architecture: amd64
 Maintainer: Jan Wedekind <jan@wedesoft.de>
 Installed-Size: 2025
@@ -7,11 +7,11 @@ Depends: guile-2.0-libs, libavcodec57 (>= 7:3.2.5) | libavcodec-extra57 (>= 7:3.
 Homepage: http://wedesoft.github.io/aiscm/
 Priority: optional
 Section: lisp
-Filename: pool/main/a/aiscm/aiscm_0.13.1-1_amd64.deb
-Size: 923664
-SHA256: 7b7f0bb746fbcfbc030851092bec9c064601922be91c4fb46d3b158671b94155
-SHA1: 188dc376944c02db8ccd691fc8a001c4e9674939
-MD5sum: fb1d14fb5037cc70d77fbe2b2b86c450
+Filename: pool/main/a/aiscm/aiscm_0.13.1-1+deb9u1_amd64.deb
+Size: 924066
+SHA256: ccb52ddb7e89b4bc737158cc951a783f493df39b02c39bc0495d47d5b1efe013
+SHA1: a52ca3a0ef927bc87deb5e8fab96114eacc456c2
+MD5sum: b6d30fc841dfb1b291d9431db1d83034
 Description: Guile numerical arrays and tensor extension
  AIscm is a Guile extension providing multi-dimensional arrays and tensor
  operations. Array elements can be scalars or composite values such as complex

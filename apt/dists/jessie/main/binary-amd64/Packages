@@ -1,17 +1,17 @@
 Package: aiscm
-Version: 0.12.1-1+deb8u1
+Version: 0.13.1-1+deb8u1
 Architecture: amd64
 Maintainer: Jan Wedekind <jan@wedesoft.de>
-Installed-Size: 1751
-Depends: guile-2.0-libs, libavcodec56 (>= 6:11~beta1) | libavcodec-extra-56 (>= 6:11.8), libavformat56 (>= 6:11~beta1), libavresample2 (>= 6:11~beta1), libavutil54 (>= 6:11~beta1), libc6 (>= 2.15), libgc1c2 (>= 1:7.2d), libgl1-mesa-glx | libgl1, libglu1-mesa | libglu1, libice6 (>= 1:1.0.0), liblavjpeg-2.1-0, libmagickcore-6.q16-2 (>= 8:6.8.8.2), libmjpegutils-2.1-0, libpulse0 (>= 0.99.1), libsm6, libswscale3 (>= 6:11~beta1), libx11-6, libxext6, libxi6, libxmu6, libxpm4, libxt6, libxv1
+Installed-Size: 1963
+Depends: guile-2.0-libs, libavcodec56 (>= 6:11~beta1) | libavcodec-extra-56 (>= 6:11.9), libavformat56 (>= 6:11~beta1), libavresample2 (>= 6:11~beta1), libavutil54 (>= 6:11~beta1), libc6 (>= 2.15), libgc1c2 (>= 1:7.2d), libgl1-mesa-glx | libgl1, libglu1-mesa | libglu1, libice6 (>= 1:1.0.0), liblavjpeg-2.1-0, libmagickcore-6.q16-2 (>= 8:6.8.8.2), libmjpegutils-2.1-0, libpulse0 (>= 0.99.1), libsm6, libswscale3 (>= 6:11~beta1), libx11-6, libxext6, libxi6, libxmu6, libxpm4, libxt6, libxv1
 Homepage: http://wedesoft.github.io/aiscm/
 Priority: optional
 Section: lisp
-Filename: pool/main/a/aiscm/aiscm_0.12.1-1+deb8u1_amd64.deb
-Size: 761292
-SHA256: 0d637aebd41d3b480460753d69788ca15ad67ea7ca8919e4d807f75513d4c2b8
-SHA1: fc748a5430c8945e4264d1052e46c0a2d6aaf17f
-MD5sum: a17c0b48d1ac6f871abfe5c2a68c53f3
+Filename: pool/main/a/aiscm/aiscm_0.13.1-1+deb8u1_amd64.deb
+Size: 863252
+SHA256: 093663c3a04beb4f9e392b08d9f6a8f991e4be4c01c9778c9358177fe92e16f1
+SHA1: 133cc02338a82f074af5b79e2e572f176b2834c8
+MD5sum: 8edcd5ab22ac98ac9bc397dab46aa227
 Description: Guile numerical arrays and tensor extension
  AIscm is a Guile extension providing multi-dimensional arrays and tensor
  operations. Array elements can be scalars or composite values such as complex
