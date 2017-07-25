@@ -5,27 +5,45 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Jan Wedekind" />
-  <meta name="date" content="2017-05-22" />
-  <title>AIscm - Guile extension for numerical arrays and tensors</title>
+  <meta name="date" content="2017-07-01" />
+  <title>AIscm – Guile extension for numerical arrays and tensors</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
+div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
 table.sourceCode { width: 100%; line-height: 100%; }
 td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
 td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; }
-code > span.dt { color: #902000; }
-code > span.dv { color: #40a070; }
-code > span.bn { color: #40a070; }
-code > span.fl { color: #40a070; }
-code > span.ch { color: #4070a0; }
-code > span.st { color: #4070a0; }
-code > span.co { color: #60a0b0; font-style: italic; }
-code > span.ot { color: #007020; }
-code > span.al { color: #ff0000; font-weight: bold; }
-code > span.fu { color: #06287e; }
-code > span.er { color: #ff0000; font-weight: bold; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
   <link rel="stylesheet" href="buttondown.css" type="text/css" />
 </head>
@@ -46,7 +64,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><strong>conj</strong>: complex conjugate</li>
 </ul>
 <p>Here are a few examples using those operations:</p>
-<pre class="sourceCode Scheme"><code class="sourceCode scheme">(use-modules (aiscm sequence) (aiscm int) (aiscm jit) (aiscm rgb) (aiscm complex))
+<div class="sourceCode"><pre class="sourceCode scheme"><code class="sourceCode scheme">(use-modules (aiscm sequence) (aiscm int) (aiscm jit) (aiscm rgb) (aiscm complex))
 (<span class="kw">-</span> (seq &lt;int&gt; <span class="dv">2</span> <span class="dv">3</span> <span class="dv">5</span>))
 <span class="co">;#&lt;sequence&lt;int&lt;32,signed&gt;&gt;&gt;:</span>
 <span class="co">;(-2 -3 -5)</span>
@@ -88,17 +106,19 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <span class="co">;(2.0-3.0i 5.0-7.0i)</span>
 (conj (seq <span class="dv">2</span> <span class="dv">3</span> <span class="dv">5</span>))
 <span class="co">;#&lt;sequence&lt;int&lt;8,unsigned&gt;&gt;&gt;:</span>
-<span class="co">;(2 3 5)</span></code></pre>
+<span class="co">;(2 3 5)</span></code></pre></div>
 <p>Applied to the following image ...</p>
 <div class="figure">
-<img src="star-ferry.jpg" title="Test input image" alt="star-ferry.jpg" /><p class="caption">star-ferry.jpg</p>
+<img src="star-ferry.jpg" title="Test input image" alt="star-ferry.jpg" />
+<p class="caption">star-ferry.jpg</p>
 </div>
 <p>... inverting the RGB values yields the following image:</p>
 <div class="figure">
-<img src="inverted.jpg" title="Inverted image" alt="inverted.jpg" /><p class="caption">inverted.jpg</p>
+<img src="inverted.jpg" title="Inverted image" alt="inverted.jpg" />
+<p class="caption">inverted.jpg</p>
 </div>
-<pre class="sourceCode Scheme"><code class="sourceCode scheme">(use-modules (aiscm magick) (aiscm jit))
-(write-image (~ (read-image <span class="st">&quot;star-ferry.jpg&quot;</span>)) <span class="st">&quot;inverted.jpg&quot;</span>)</code></pre>
+<div class="sourceCode"><pre class="sourceCode scheme"><code class="sourceCode scheme">(use-modules (aiscm magick) (aiscm jit))
+(write-image (~ (read-image <span class="st">&quot;star-ferry.jpg&quot;</span>)) <span class="st">&quot;inverted.jpg&quot;</span>)</code></pre></div>
 <h2 id="binary-operations">Binary operations</h2>
 <p>The binary operations are:</p>
 <ul>
@@ -114,19 +134,19 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><strong>^:</strong> bitwise exclusive-or</li>
 <li><strong>&amp;&amp;:</strong> boolean and</li>
 <li><strong>||:</strong> boolean or</li>
-<li><strong>=:</strong> equality</li>
+<li><strong>==:</strong> equality</li>
 <li><strong>!=:</strong> unequal</li>
-<li><strong>&lt;:</strong> lower than</li>
-<li><strong>&lt;=:</strong> lower or equal</li>
-<li><strong>&gt;:</strong> greater than</li>
-<li><strong>&gt;=:</strong> greater or equal</li>
+<li><strong>lt:</strong> lower than</li>
+<li><strong>le:</strong> lower or equal</li>
+<li><strong>gt:</strong> greater than</li>
+<li><strong>ge:</strong> greater or equal</li>
 <li><strong>min:</strong> minor value</li>
 <li><strong>max:</strong> major value</li>
 <li><strong>complex:</strong> compose complex number</li>
 </ul>
 <p>Furthermore there is <strong>rgb</strong> for composing RGB values which is a ternary method.</p>
 <p>Each binary operation can combine arrays and/or scalars. Most scalar-scalar operations are already part of the Scheme programming language. <em>AIscm</em> mostly needs to provide a few numerical operations and some support for RGB and complex values.</p>
-<pre class="sourceCode Scheme"><code class="sourceCode scheme">(use-modules (aiscm int) (aiscm rgb) (aiscm complex))
+<div class="sourceCode"><pre class="sourceCode scheme"><code class="sourceCode scheme">(use-modules (aiscm int) (aiscm rgb) (aiscm complex))
 (&lt;&lt; <span class="dv">3</span> <span class="dv">2</span>)
 <span class="co">;12</span>
 (% <span class="dv">1234</span> <span class="dv">100</span>)
@@ -135,22 +155,24 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <span class="co">;255</span>
 (<span class="kw">+</span> (rgb <span class="dv">2</span> <span class="dv">3</span> <span class="dv">5</span>) <span class="dv">1</span>)
 <span class="co">;(rgb 3 4 6)</span>
-(<span class="kw">=</span> (rgb <span class="dv">2</span> <span class="dv">2</span> <span class="dv">2</span>) <span class="dv">2</span>)
-<span class="co">;#t</span></code></pre>
+(== (rgb <span class="dv">2</span> <span class="dv">2</span> <span class="dv">2</span>) <span class="dv">2</span>)
+<span class="co">;#t</span></code></pre></div>
 <p>One can use an array-scalar operation to divide each colour channels of an image by a number.</p>
 <div class="figure">
-<img src="divided.jpg" title="Divided image" alt="divided.jpg" /><p class="caption">divided.jpg</p>
+<img src="divided.jpg" title="Divided image" alt="divided.jpg" />
+<p class="caption">divided.jpg</p>
 </div>
-<pre class="sourceCode Scheme"><code class="sourceCode scheme">(use-modules (aiscm magick) (aiscm rgb) (aiscm sequence) (aiscm jit))
-(write-image (<span class="kw">/</span> (read-image <span class="st">&quot;star-ferry.jpg&quot;</span>) (rgb <span class="dv">1</span> <span class="dv">1</span> <span class="dv">2</span>)) <span class="st">&quot;divided.jpg&quot;</span>)</code></pre>
+<div class="sourceCode"><pre class="sourceCode scheme"><code class="sourceCode scheme">(use-modules (aiscm magick) (aiscm rgb) (aiscm sequence) (aiscm jit))
+(write-image (<span class="kw">/</span> (read-image <span class="st">&quot;star-ferry.jpg&quot;</span>) (rgb <span class="dv">1</span> <span class="dv">1</span> <span class="dv">2</span>)) <span class="st">&quot;divided.jpg&quot;</span>)</code></pre></div>
 <p>Another example is using the modulo operator to show the remainder of division by an integer for each channel.</p>
 <div class="figure">
-<img src="modulo.jpg" title="Remainder values" alt="modulo.jpg" /><p class="caption">modulo.jpg</p>
+<img src="modulo.jpg" title="Remainder values" alt="modulo.jpg" />
+<p class="caption">modulo.jpg</p>
 </div>
-<pre class="sourceCode Scheme"><code class="sourceCode scheme">(use-modules (aiscm magick) (aiscm rgb) (aiscm jit))
-(write-image (% (read-image <span class="st">&quot;star-ferry.jpg&quot;</span>) (rgb <span class="dv">250</span> <span class="dv">200</span> <span class="dv">150</span>)) <span class="st">&quot;modulo.jpg&quot;</span>)</code></pre>
+<div class="sourceCode"><pre class="sourceCode scheme"><code class="sourceCode scheme">(use-modules (aiscm magick) (aiscm rgb) (aiscm jit))
+(write-image (% (read-image <span class="st">&quot;star-ferry.jpg&quot;</span>) (rgb <span class="dv">250</span> <span class="dv">200</span> <span class="dv">150</span>)) <span class="st">&quot;modulo.jpg&quot;</span>)</code></pre></div>
 <p>Each binary operation can appear in scalar-array, array-scalar, or array-array form. Also note that the arrays can have different number of dimensions as long as the tail of the shape matches.</p>
-<pre class="sourceCode Scheme"><code class="sourceCode scheme">(use-modules (aiscm sequence) (aiscm element) (aiscm jit))
+<div class="sourceCode"><pre class="sourceCode scheme"><code class="sourceCode scheme">(use-modules (aiscm sequence) (aiscm element) (aiscm jit))
 (<span class="kw">define</span><span class="fu"> a </span>(arr (<span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span>) (<span class="dv">4</span> <span class="dv">5</span> <span class="dv">6</span>)))
 a
 <span class="co">;#&lt;sequence&lt;sequence&lt;int&lt;8,unsigned&gt;&gt;&gt;&gt;:</span>
@@ -176,10 +198,10 @@ b
 (* a b)
 <span class="co">;#&lt;sequence&lt;sequence&lt;int&lt;16,signed&gt;&gt;&gt;&gt;:</span>
 <span class="co">;((-1 -2 -3)</span>
-<span class="co">; (4 5 6))</span></code></pre>
+<span class="co">; (4 5 6))</span></code></pre></div>
 <h2 id="tensor-operations">Tensor operations</h2>
-<p>Tensor notation is a compact way to describe operations involving multi-dimensional arrays. The <em>tensor</em> macro is used to declare a tensor expression. <em>dim</em> and <em>get</em> can be used to create indices and access array elements. <em>inject</em> can be used to perform tensor summation or other cummulative operations. See examples below for the behaviour of tensors.</p>
-<pre class="sourceCode Scheme"><code class="sourceCode scheme">(use-modules (oop goops) (aiscm sequence) (aiscm tensor) (aiscm expression))
+<p>Tensor notation is a compact way to describe operations involving multi-dimensional arrays. The <em>tensor</em> macro is used to declare a tensor expression. <em>dim</em> and <em>get</em> can be used to create indices and access array elements. <em>sum</em>, <em>prod</em>, <em>largest</em>, and <em>smallest</em> can be used to perform a tensor sum, a cumulative product, or finding the largest/smallest element for a given tensor index. See examples below for the behaviour of tensors.</p>
+<div class="sourceCode"><pre class="sourceCode scheme"><code class="sourceCode scheme">(use-modules (oop goops) (aiscm sequence) (aiscm tensor) (aiscm expression))
 (tensor <span class="dv">42</span>)
 <span class="co">;42</span>
 (tensor (seq <span class="dv">2</span> <span class="dv">3</span> <span class="dv">5</span>))
@@ -219,7 +241,7 @@ b
 <span class="co">;(8 6 5)</span>
 (tensor (smallest i (get (arr (<span class="dv">2</span> <span class="dv">3</span> <span class="dv">5</span>) (<span class="dv">8</span> <span class="dv">6</span> <span class="dv">4</span>)) i)))
 <span class="co">;#&lt;sequence&lt;int&lt;8,unsigned&gt;&gt;&gt;:</span>
-<span class="co">;(2 3 4)</span></code></pre>
-<hr/><em>Generated by Pandoc - 2017-05-22</em>
+<span class="co">;(2 3 4)</span></code></pre></div>
+<hr/><em>Generated by Pandoc - 2017-07-01</em>
 </body>
 </html>
